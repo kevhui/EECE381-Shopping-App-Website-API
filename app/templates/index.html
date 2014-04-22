@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+<title>Juan Shop</title>
+</head>
+
+<h1>buy Juan get Juan free!</h1>
+<body>
+<table>
+    <tr>
+        <td>upc</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Category</td>
+       	<td>Stock</td>
+    </tr>
+        {% if items %}
+        {% for i in items%}
+        <tr>
+            <td>{{i['upc']}}</td>
+            <td>{{i['name']}}</td>
+            <td>{{i['price']}}</td>
+            <td>{{i['category']}}</td>
+            <td>{{i['stock']}}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+</body>
+    </html>
